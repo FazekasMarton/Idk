@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kayn Form Calculator</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left">
+            <img src="img/error.png" alt="" class="kepekleft kepek"><input list="champinput" oninput="icons(0)" class="input" name="Ally">
+                <datalist id="champinput"></datalist>
+            </input>
+            <br>
+            <img src="img/Kayn.png" alt="" class="kaynkep"><input type="text" class="kayninput" name="Me" value="Kayn" disabled>
+            <br>
+            <img src="img/error.png" alt="" class="kepekleft kepek"><input list="champinput" oninput="icons(1)" class="input" name="Ally">
+                <datalist id="champinput"></datalist>
+            </input>
+            <br>
+            <img src="img/error.png" alt="" class="kepekleft kepek"><input list="champinput" oninput="icons(2)" class="input" name="Ally">
+                <datalist id="champinput"></datalist>
+            </input>
+            <br>
+            <img src="img/error.png" alt="" class="kepekleft kepek"><input list="champinput" oninput="icons(3)" class="input" name="Ally">
+                <datalist id="champinput"></datalist>
+            </input>
+            <br>
+        </div>
+        <div class="middle">
+            <div class="kk"><br>
+                <div class="bk">
+                    <img id="icon" src="img/Kayn.png" alt="icon">
+                    <div id="rate"></div>
+                </div>
+            </div>
+            <button onclick="calculate()" id="calculate">Calculate</button>
+            <button onclick="reset()" id="reset">Reset</button>
+        </div>
+        <div class="right">
+            <input list="champinput1" oninput="icons(4)" class="input" name="Enemy">
+                <datalist id="champinput1"></datalist>
+            </input><img src="img/error.png" alt="" class="kepekright kepek">
+            <br>
+            <input list="champinput2" oninput="icons(5)" class="input" name="Enemy">
+                <datalist id="champinput2"></datalist>
+            </input><img src="img/error.png" alt="" class="kepekright kepek">
+            <br>
+            <input list="champinput3" oninput="icons(6)" class="input" name="Enemy">
+                <datalist id="champinput3"></datalist>
+            </input><img src="img/error.png" alt="" class="kepekright kepek">
+            <br>
+            <input list="champinput4" oninput="icons(7)" class="input" name="Enemy">
+                <datalist id="champinput4"></datalist>
+            </input><img src="img/error.png" alt="" class="kepekright kepek">
+            <br>
+            <input list="champinput5" oninput="icons(8)" class="input" name="Enemy">
+                <datalist id="champinput5"></datalist>
+            </input><img src="img/error.png" alt="" class="kepekright kepek">
+            <br>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="leftside">
+            <div></div>
+            <div></div>
+            <div class="last"></div>
+        </div>
+        <div class="content">
+            <h1>Raast Vs Kayn</h1>
+            <h2>Red and blue orbs</h2>
+            <div id="rabo">&nbsp;Red orbs||Blue orbs</div>
+            <h2>Tank and squishy champs in the enemy team</h2>
+            <div id="tap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tank||Squishy</div>
+            <h1>Team vs Team</h1>
+            <h2>Tank in your team and in the enemy team</h2>
+            <div id="tank">&nbsp;&nbsp;&nbsp;&nbsp;Your team||Enemy team</div>
+            <h2>Crowd control abilities in your team and in the enemy team</h2>
+            <div id="cc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In your team||In the enemy team</div>
+            <div id="analizis">
+                <h1>Analysis</h1>
+                <h2>AD vs AP</h2>
+                    Too many <span id="adoap"></span> champions<br>
+                    <div id="adap">AD||AP</div>
+                    Recommended items: <br>
+                    <img id="apitem" class="items" src="https://static.wikia.nocookie.net/leagueoflegends/images/b/b0/Spirit_Visage_item_HD.png/revision/latest/scale-to-width-down/64?cb=20201111003914" alt=""><img id="aditem" class="items" src="https://static.wikia.nocookie.net/leagueoflegends/images/7/74/Death%27s_Dance_item_HD.png/revision/latest/scale-to-width-down/64?cb=20201110222520" alt="">
+                <div id="analcc">
+                    <h2>Crowd control abilities</h2>
+                    Too many crowd control abilities <br>
+                    <b><span id="ccnumber"></span></b><br>
+                    Recommended items: <br>
+                    <img class="items" src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a8/Quicksilver_Sash_item_HD.png/revision/latest/scale-to-width-down/64?cb=20201111000632" alt=""><img class="items" src="https://static.wikia.nocookie.net/leagueoflegends/images/8/8e/Mercury%27s_Treads_item_HD.png/revision/latest/scale-to-width-down/64?cb=20201116182101" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="rightside">
+            <div></div>
+            <div></div>
+            <div class="last"></div>
+        </div>
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+</html>
